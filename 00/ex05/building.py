@@ -2,6 +2,7 @@
 
 import sys
 
+
 def count_char(str1: str):
     """This function count each type of char and print in the command line"""
     total = 0
@@ -12,15 +13,17 @@ def count_char(str1: str):
     digit = 0
     for c in str1:
         total += 1
-        if (c >= 'A' and c <= 'Z'):
+        if c.isupper():
             up += 1
-        elif (c >= 'a' and c <= 'z'):
+        elif c.islower():
             low += 1
-        elif (c >= '0' and c <= '9'):
+        elif c.isdigit():
             digit += 1
-        elif c == ' ' or (c >= '\t' and c <= '\r'):
+        elif c.isspace():
             space += 1
-        elif (c >= '!' and c <= '/') or (c >= ':' and c <= '@') or (c >= '[' and c <= '`') or (c >= '{' and c <= '~'):
+        elif (c >= '!' and c <= '/') or (c >= ':' and c <= '@'):
+            punc += 1
+        elif (c >= '[' and c <= '`') or (c >= '{' and c <= '~'):
             punc += 1
     print(f"The text contains {total} characters:")
     print(f"{up} upper letters")
@@ -30,8 +33,8 @@ def count_char(str1: str):
     print(f"{digit} digits")
 
 
-
-if __name__ == "__main__":
+def main():
+    """The main function, read either from argv or stdin of """
     try:
         assert len(sys.argv) <= 2, "more than one argument is provided"
     except AssertionError as e:
@@ -41,8 +44,12 @@ if __name__ == "__main__":
     if (len(sys.argv) == 2):
         count_char(sys.argv[1])
     else:
+        print("What is the text to count?")
         try:
-            strin = input("What is the text to count?\n")
-            count_char(strin + '\n')
+            strin = sys.stdin.read()
+            count_char(strin)
         except EOFError:
             pass
+
+if __name__ == "__main__":
+    main()
