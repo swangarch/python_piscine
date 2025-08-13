@@ -24,13 +24,18 @@ NESTED_MORSE = {
 
 if __name__ == "__main__":
 	try:
-		assert (len(sys.argv) == 2), "the arguments are bad"
+		assert (len(sys.argv) == 2 and set(sys.argv[1]) <= set(NESTED_MORSE.keys())), "the arguments are bad"
+		arg1 = sys.argv[1]
+		arglen = len(arg1)
+		for i in range(arglen):
+			if i < arglen - 1:
+				print(NESTED_MORSE[arg1[i]], end=" ")
+			else:
+				print(NESTED_MORSE[arg1[i]])
 
 	except AssertionError as e:
 		print("AssertionError:", e)
 		sys.exit(1)
-
-	for c in sys.argv[1]:
-		print(NESTED_MORSE[c], end="")
+		
 	
-	print()
+	
