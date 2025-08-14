@@ -9,7 +9,7 @@ if __name__ == "__main__":
         print("AssertionError:", e)
         sys.exit(1)
 
-    if (len(sys.argv) == 2):
+    if len(sys.argv) == 2:
         try:
             num = int(sys.argv[1])
             if (num % 2 == 0):

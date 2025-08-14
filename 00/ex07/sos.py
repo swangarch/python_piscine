@@ -22,6 +22,8 @@ NESTED_MORSE = {
     ' ': '/'
 }
 
+# def main():
+
 if __name__ == "__main__":
 	try:
 		assert (len(sys.argv) == 2 and set(sys.argv[1]) <= set(NESTED_MORSE.keys())), "the arguments are bad"

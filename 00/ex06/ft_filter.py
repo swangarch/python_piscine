@@ -21,7 +21,7 @@ is true. If function is None, return the items that are true."""
 # 	return len(s) < 5
 
 
-# if (__name__ == "__main__"):
+# if __name__ == "__main__":
 # 	print(filter.__doc__)
 
 # 	print("............................................................")
