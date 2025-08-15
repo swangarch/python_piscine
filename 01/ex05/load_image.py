@@ -8,11 +8,15 @@ def ft_load(path: str): #(you can return to the desired format)
 
 	try:
 		img = Image.open(path)
-		img = img.convert("L")
 		arr = np.array(img)
-		# print("The shape of image is:", arr.shape)
 		return arr
 
 	except Exception as e:
 		print("Error:", e)
 		return None
+
+def ft_show_img(imgArr) -> None:
+	"""Function to show image."""
+
+	newImgT = Image.fromarray(imgArr)
+	newImgT.show()

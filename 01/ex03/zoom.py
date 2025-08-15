@@ -1,13 +1,16 @@
 from PIL import Image
 from load_image import ft_load
 
+def ft_crop(imgArr, startX, startY, sizeX, sizeY):
+	"""Function to crop a image array, return a new array"""
+
+	return imgArr[startY:startY + sizeY, startX:startX + sizeX, 0]
+
 def main():  #create function
 	try:
 		imgArr = ft_load("animal.jpeg")
 		print(imgArr)
-		startX = 350
-		startY = 160
-		newImgArr = imgArr[startY:startY + 400, startX:startX + 400, 0]
+		newImgArr = ft_crop(imgArr, 350, 160, 400, 400)
 		print("New shape after slicing:", newImgArr.shape)
 		print(newImgArr)
 
