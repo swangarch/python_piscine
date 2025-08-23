@@ -10,3 +10,7 @@ print("---")
 v3 = calculator([10.0, 15.0, 20.0])
 v3 - 5
 v3 / 5
+
+print("\n--Error handle--")
+v3 / 0
+v3 / [1.0]

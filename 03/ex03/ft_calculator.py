@@ -1,39 +1,59 @@
 
 
 class calculator:
-	"""A calculator class support + - * /"""
+	"""A calculator class support + - * / between objects."""
 
 	def __init__(self, object):
-		""""""
+		"""Initialize calculator instance with an object passed as parameter."""
 
-		self.vec = object
+		self.object = object
 	
-	# def __str__(self):
-		# """"""
+	def __str__(self):
+		return f'Calculator object which contains: {self.object}'
 
-	# def __repr__(self):
-		# """"""
+	def __repr__(self):
+		return f'Object: ({self.object})'
 
-	def __add__(self, object) -> None: #type check
-		""""""
+	def __add__(self, object) -> None:
+		"""Add with a passed scalar as parameter."""
 
-		object = [elem + object for elem in self.vec]
-		print(object)
+		try:
+			if not (isinstance(object, int) or isinstance(object, float)):
+				raise TypeError("parameter not a number")
+			object = [elem + object for elem in self.object]
+			print(object)
+		except Exception as e:
+			print("Error", e)
 
 	def __mul__(self, object) -> None:
-		""""""
+		"""Multiply with a passed scalar as parameter."""
 
-		object = [elem * object for elem in self.vec]
-		print(object)
+		try:
+			if not (isinstance(object, int) or isinstance(object, float)):
+				raise TypeError("parameter not a number")
+			object = [elem * object for elem in self.object]
+			print(object)
+		except Exception as e:
+			print("Error", e)
 	
 	def __sub__(self, object) -> None:
-		""""""
+		"""Substract with a passed scalar as parameter."""
 
-		object = [elem - object for elem in self.vec]
-		print(object)
+		try:
+			if not (isinstance(object, int) or isinstance(object, float)):
+				raise TypeError("parameter not a number")
+			object = [elem - object for elem in self.object]
+			print(object)
+		except Exception as e:
+			print("Error", e)
 
 	def __truediv__(self, object) -> None:
-		""""""
+		"""Dived by a passed scalar as parameter, print error message when divide by zero."""
 
-		object = [elem / object for elem in self.vec]
-		print(object)
+		try:
+			if not (isinstance(object, int) or isinstance(object, float)):
+				raise TypeError("parameter not a number")
+			object = [elem / object for elem in self.object]
+			print(object)
+		except Exception as e:
+			print("Error:", e)
