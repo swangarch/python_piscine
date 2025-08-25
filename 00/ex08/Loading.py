@@ -9,7 +9,7 @@ def ft_tqdm(lst: range) -> None:
     like the original iterable, but prints a dynamically updating
     progressbar every time a value is requested."""
 
-	bar_width = 246
+	bar_width = 100
 
 	startTime = time.time()
 	for i, element in enumerate(lst):
