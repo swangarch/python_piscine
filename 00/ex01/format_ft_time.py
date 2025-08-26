@@ -10,5 +10,8 @@ scientific_fmt = f"{timestamp:.2e}"
 
 date = datetime.now()
 
-print("Seconds since January 1, 1970:", fmt, "or", scientific_fmt, "in scientific notation")
-print(date.strftime("%B %d %Y"))
+head = "Seconds since January 1, 1970:"
+end = "in scientific notation"
+
+print(head, fmt, "or", scientific_fmt, end)
+print(date.strftime("%b %d %Y"))

@@ -1,10 +1,12 @@
-#!/usr/bin/pyton
+#!/usr/bin/pyton3
 
 import sys
 
 
-def count_char(str1: str):
-    """This function count each type of char and print in the command line"""
+def count_char(str1: str) -> None:
+    """This function counts each type of char in the input string,
+and print in the command line"""
+
     total = 0
     up = 0
     low = 0
@@ -34,22 +36,26 @@ def count_char(str1: str):
 
 
 def main():
-    """The main function, read either from argv or stdin of """
+    """The main function, read either from argv or stdin,
+and then counts each type of char in the input string,
+and print in the command line"""
+
     try:
-        assert len(sys.argv) <= 2, "more than one argument is provided"
+        assert len(sys.argv) <= 2, "More than one argument is provided"
     except AssertionError as e:
         print("AssertionError:", e)
         sys.exit(1)
 
-    if (len(sys.argv) == 2):
+    if len(sys.argv) == 2:
         count_char(sys.argv[1])
-    else:
-        print("What is the text to count?")
-        try:
-            strin = sys.stdin.read()
-            count_char(strin)
-        except EOFError:
-            pass
+        sys.exit(0)
+
+    try:
+        strin = input("What is the text to count?\n")
+        count_char(strin + '\n')
+    except EOFError:
+        pass
+
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,5 @@
+#!/usr/bin/pyton3
+
 from time import sleep
 from tqdm import tqdm
 from Loading import ft_tqdm

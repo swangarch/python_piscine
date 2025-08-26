@@ -1,8 +1,11 @@
+#!/usr/bin/pyton3
+
 import time
 
 def format_time(time) -> str:
 	"""    Convert a time in second to the format of 00:00"""
 	return f"{int(time % 3600 // 60):02}:{int(time % 60):02}"
+
 
 def ft_tqdm(lst: range) -> None:
 	"""    Decorate an iterable object, returning an iterator which acts exactly
