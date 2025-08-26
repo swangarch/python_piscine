@@ -22,13 +22,13 @@ def ft_tqdm(lst: range) -> None:
 			print(f"\r{0: 3d}%|", end="")
 			for j in range(bar_width):
 				print(" ", end="")
-			print(f"| {i + 1}/{len(lst)} [{format_time(0)}<{format_time(0)}, 0it/s]", end="")
+			print(f"| {i + 1}/{length} [{format_time(0)}<{format_time(0)}, 0it/s]", end="")
 		if ((i + 1) % 20 == 0):
-			print(f"\r{(int((i + 1) * 100 / len(lst))): 3d}%|", end="")
+			print(f"\r{(int((i + 1) * 100 / length)): 3d}%|", end="")
 			for j in range(bar_width):
 				if j == 0:
 					print(" ", end="")
-				elif j <= (i + 1) * bar_width / len(lst):
+				elif j <= (i + 1) * bar_width / length:
 					print("█", end="")
 				else:
 					print(" ", end="")
@@ -37,9 +37,9 @@ def ft_tqdm(lst: range) -> None:
 			rate = 0
 			if (deltaTime != 0 and i > 1):
 				rate = (i + 1) / deltaTime
-			restTime = deltaTime / (i / len(lst)) - deltaTime
-			print(f"| {i + 1}/{len(lst)} [{format_time(deltaTime)}<{format_time(restTime)}, {rate:.2f}it/s]", end="")
-		elif (i == len(lst) - 1):
+			restTime = deltaTime / (i / length) - deltaTime
+			print(f"| {i + 1}/{length} [{format_time(deltaTime)}<{format_time(restTime)}, {rate:.2f}it/s]", end="")
+		elif (i == length - 1):
 			print(f"\r100%|", end="")
 			for j in range(bar_width):
 				print("█", end="")
@@ -48,6 +48,6 @@ def ft_tqdm(lst: range) -> None:
 			rate = 0
 			if (deltaTime != 0 and i > 1):
 				rate = (i + 1) / deltaTime
-			print(f"| {len(lst)}/{len(lst)} [{format_time(deltaTime)}<00:00, {rate:.2f}it/s]")
+			print(f"| {length}/{length} [{format_time(deltaTime)}<00:00, {rate:.2f}it/s]")
 		print("\r", end="", flush=True)
 		yield element
