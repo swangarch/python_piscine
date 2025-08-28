@@ -1,6 +1,10 @@
 #!/usr/bin/pyton3
 
-def ft_filter(function, iterable):
+from typing import Callable, Iterable, Iterator, TypeVar
+
+T = TypeVar("T")
+
+def ft_filter(function: Callable[[T], bool] | None, iterable: Iterable[T]) -> Iterator[T]:
     """filter(function or None, iterable) --> filter object
 
 Return an iterator yielding those items of iterable for which function(item)

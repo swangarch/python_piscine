@@ -1,4 +1,0 @@
-python3 -m pip install --user --upgrade setuptools wheel twine
-
-python setup.py bdist_wheel sdist
-whl tar.gz

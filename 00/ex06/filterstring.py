@@ -31,6 +31,9 @@ def check_num(s: str) -> bool:
 
 
 def main():
+    """A program that accepts two arguments: a string(S), and an integer(N). The
+program should will a list of words from S that have a length greater than N."""
+
     try:
         assert len(sys.argv) == 3, "the arguments are bad"
         assert check_str(sys.argv[1]), "the arguments are bad"

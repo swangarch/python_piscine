@@ -4,7 +4,7 @@ from ft_filter import ft_filter
 
 
 def isOdd(num: int) -> bool:
-    """Check if a number is odd"""
+    """Check if a number is odd."""
 
     if not isinstance(num, int):
         return False
@@ -12,7 +12,7 @@ def isOdd(num: int) -> bool:
 
 
 def lessThanFiveChar(s: str) -> bool:
-    """Check if a number is even"""
+    """Check if a string has less than five characters."""
 
     if not isinstance(s, str):
         return False
@@ -20,33 +20,36 @@ def lessThanFiveChar(s: str) -> bool:
 
 
 def main():
-    """Tests compare original filter and ft_filter"""
+    """Tests compare original filter and ft_filter."""
 
-    print(filter.__doc__)
+    try:
+        print(filter.__doc__)
 
-    print("............................................................")
+        print("............................................................")
 
-    print(ft_filter.__doc__)
+        print(ft_filter.__doc__)
 
-    print("____________________________________________________________")
+        print("____________________________________________________________")
 
-    list1 = [True, False, True, False, False]
-    print(list(filter(None, list1)))
-    print(list(ft_filter(None, list1)))
+        list1 = [True, False, True, False, False]
+        print(list(filter(None, list1)))
+        print(list(ft_filter(None, list1)))
 
-    print("____________________________________________________________")
+        print("____________________________________________________________")
 
-    list2 = [1, 4, 5, 6, 9]
-    print(list(filter(isOdd, list2)))
-    print(list(ft_filter(isOdd, list2)))
+        list2 = [1, 4, 5, 6, 9]
+        print(list(filter(isOdd, list2)))
+        print(list(ft_filter(isOdd, list2)))
 
-    print("____________________________________________________________")
+        print("____________________________________________________________")
 
-    tuple1 = (1, "Hello world", "hello", "hi", "mov", "ecole42", "42", 42)
-    print(tuple(filter(lessThanFiveChar, tuple1)))
-    print(tuple(ft_filter(lessThanFiveChar, tuple1)))
+        tuple1 = (1, "Hello world", "hello", "hi", "mov", "ecole42", "42", 42)
+        print(tuple(filter(lessThanFiveChar, tuple1)))
+        print(tuple(ft_filter(lessThanFiveChar, tuple1)))
 
-    print("____________________________________________________________")
+        print("____________________________________________________________")
+    except Exception as e:
+        print("Error:", e)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def NULL_not_found(object: any) -> int:
+    """Print the null object type of given object."""
+
     if object.__class__.__name__ == "NoneType":
         print("Nothing:", object, object.__class__)
     elif object.__class__.__name__ == "float" and object != object:

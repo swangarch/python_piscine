@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def all_thing_is_obj(object: any) -> int:
+    """Print the type of an object, and return 42."""
+
     if object.__class__.__name__ == "list":
         print("List :", object.__class__)
     elif object.__class__.__name__ == "tuple":

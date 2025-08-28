@@ -1,20 +1,28 @@
 #!/usr/bin/python3
 
-ft_list = ["Hello", "tata!"]
-ft_tuple = ("Hello", "toto!")
-ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello": "titi!"}
 
-ft_list[1] = "World!"
+def main():
+	"""Script to learn the basic manupulation of sequence."""
 
-ft_tuple = ("Hello", "France!")
+	ft_list = ["Hello", "tata!"]
+	ft_tuple = ("Hello", "toto!")
+	ft_set = {"Hello", "tutu!"}
+	ft_dict = {"Hello": "titi!"}
 
-ft_set.remove("tutu!")
-ft_set.add("Paris!")
+	ft_list[1] = "World!"
 
-ft_dict["Hello"] = "42Paris!"
+	ft_tuple = ("Hello", "France!")
 
-print(ft_list)
-print(ft_tuple)
-print(ft_set)
-print(ft_dict)
+	ft_set.remove("tutu!")
+	ft_set.add("Paris!")
+
+	ft_dict["Hello"] = "42Paris!"
+
+	print(ft_list)
+	print(ft_tuple)
+	print(ft_set)
+	print(ft_dict)
+
+
+if __name__ == "__main__":
+	main()

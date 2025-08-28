@@ -36,9 +36,9 @@ and print in the command line"""
 
 
 def main():
-    """The main function, read either from argv or stdin,
+    """The main function, reads either from argv or stdin,
 and then counts each type of char in the input string,
-and print in the command line"""
+and prints in the command line"""
 
     try:
         assert len(sys.argv) <= 2, "More than one argument is provided"
