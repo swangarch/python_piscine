@@ -4,7 +4,8 @@ import sys
 
 
 def main():
-    """Program that takes an argument, prints it's type if it's a interger, otherwise prints an error."""
+    """Program that takes an argument, prints it's type if it's
+an interger, otherwise prints an error."""
 
     try:
         assert (len(sys.argv) <= 2), "more than one argument is provided"
