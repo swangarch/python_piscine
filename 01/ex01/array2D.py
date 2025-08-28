@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import numpy as np
 
 def slice_me(family: list, start: int, end: int) -> list:
@@ -5,10 +7,13 @@ def slice_me(family: list, start: int, end: int) -> list:
     truncated version of the array based on the provided start and end arguments"""
 
 	try:
-		assert isinstance(family, list), "Input is not a list"
-		assert isinstance(start, int) and isinstance(end, int), "Start or end is not a int"
+		assert isinstance(family, list), "Input is not a list."
+		assert isinstance(start, int) and isinstance(end, int), "Start or end is not a int."
 
 		arr = np.array(family)
+
+		assert len(arr.shape) == 2, "Not 2D array." #？？
+
 		print("My shape is :", arr.shape)
 		s = slice(start, end)
 		newArr = arr[s]

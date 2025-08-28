@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def NULL_not_found(object: any) -> int:
     """Print the null object type of given object."""
 

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from NULL_not_found import NULL_not_found
 
 

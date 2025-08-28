@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 import numpy as np
 from PIL import Image
 from load_image import ft_load ##do the medium
+
 
 def ft_crop(imgArr, startX, startY, sizeX, sizeY):
 	"""Function to crop a image array, return a new array"""
@@ -9,6 +12,7 @@ def ft_crop(imgArr, startX, startY, sizeX, sizeY):
 	assert startX <= imgArr.shape[1] - sizeX and startY <= imgArr.shape[0] - sizeY, "Wrong crop size"
 
 	return imgArr[startY:startY + sizeY, startX:startX + sizeX]
+
 
 def ft_transpose(imgArr):
 	"""Fucntion to transpose an 2 dimensional array"""
@@ -37,6 +41,7 @@ def main():
 	
 	except Exception as e:
 		print("Error:", e)
+
 
 if __name__ == "__main__":
 	main()

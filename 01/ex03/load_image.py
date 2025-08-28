@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image
-##use matplotlib
+
 
 def ft_load(path: str): #(you can return to the desired format)
 	"""    a function that loads an image, prints its format, and its pixels

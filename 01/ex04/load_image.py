@@ -1,5 +1,8 @@
+#!/usr/bin/python3
+
 import numpy as np
 from PIL import Image
+
 
 def ft_load(path: str): #(you can return to the desired format)
 	"""    a function that loads an image, prints its format, and its pixels

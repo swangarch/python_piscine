@@ -1,5 +1,8 @@
+#!/usr/bin/python3
+
 import numpy as np
 from PIL import Image
+
 
 def ft_load(path: str): #(you can return to the desired format)
 	"""    a function that loads an image, prints its format, and its pixels
@@ -14,6 +17,7 @@ def ft_load(path: str): #(you can return to the desired format)
 	except Exception as e:
 		print("Error:", e)
 		return None
+
 
 def ft_show_img(imgArr) -> None:
 	"""Function to show image."""

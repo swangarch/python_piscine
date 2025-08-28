@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import setuptools as stp
 import sys
 

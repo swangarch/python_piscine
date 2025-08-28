@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 from load_image import ft_show_img
 from numpy import ndarray as array
 import numpy as np
+
 
 def ft_invert(array) -> array:
 	"""Inverts the color of the image received."""
@@ -8,6 +11,7 @@ def ft_invert(array) -> array:
 	newArr = 255 - array.copy()
 	ft_show_img(newArr)
 	return newArr
+
 
 def ft_red(array) -> array:
 	"""Converts the color of the image to red."""
@@ -19,6 +23,7 @@ def ft_red(array) -> array:
 	ft_show_img(newArr)
 	return newArr
 
+
 def ft_green(array) -> array:
 	"""Converts the color of the image to green."""
 
@@ -29,6 +34,7 @@ def ft_green(array) -> array:
 	ft_show_img(newArr)
 	return newArr
 
+
 def ft_blue(array) -> array:
 	"""Converts the color of the image to blue."""
 
@@ -38,6 +44,7 @@ def ft_blue(array) -> array:
 
 	ft_show_img(newArr)
 	return newArr
+
 
 def ft_grey(array) -> array:
 	"""Converts the color of the image to grey."""
