@@ -11,6 +11,8 @@ def ft_crop(imgArr, startX, startY, sizeX, sizeY):
 
 
 def main():  #create function
+	"""Program to test ft_crop function."""
+
 	try:
 		imgArr = ft_load("animal.jpeg")
 		print(imgArr)

@@ -5,7 +5,7 @@ from PIL import Image
 
 
 def ft_load(path: str): #(you can return to the desired format)
-	"""    a function that loads an image, prints its format, and its pixels
+	"""Function that loads an image, prints its format, and its pixels
     content in RGB format.
     You have to handle, at least, JPG and JPEG format."""
 

@@ -27,6 +27,8 @@ def ft_transpose(imgArr):
 
 
 def main():
+	"""Main function to load animal.jpeg and rotate it."""
+
 	try:
 		imgArr = ft_load("animal.jpeg")
 		newImgArr = ft_crop(imgArr, 350, 160, 400, 400)
