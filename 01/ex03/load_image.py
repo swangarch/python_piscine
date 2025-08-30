@@ -2,17 +2,17 @@ import numpy as np
 from PIL import Image
 
 
-def ft_load(path: str): #(you can return to the desired format)
-	"""Function that loads an image, prints its format, and its pixels
-    content in RGB format.
-    You have to handle, at least, JPG and JPEG format."""
+def ft_load(path: str) -> np.ndarray | None:
+    """Function that loads an image with path, prints its format,
+    and its pixels content in RGB format. The function works with
+    JPG and JPEG format."""
 
-	try:
-		img = Image.open(path)
-		arr = np.array(img)
-		print("The shape of image is:", arr.shape)
-		return arr
+    try:
+        img = Image.open(path)
+        arr = np.array(img)
+        print("The shape of image is:", arr.shape)
+        return arr
 
-	except Exception as e:
-		print("Error:", e)
-		return None
+    except Exception as e:
+        print("Error:", e)
+        return None

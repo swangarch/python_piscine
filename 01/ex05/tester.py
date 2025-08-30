@@ -1,5 +1,4 @@
 from load_image import ft_load
-from load_image import ft_show_img
 from pimp_image import ft_invert
 from pimp_image import ft_red
 from pimp_image import ft_green
@@ -8,7 +7,8 @@ from pimp_image import ft_grey
 
 
 def main():
-	"""Mian function to test ft_load, ft_invert, ft_red, ft_green, ft_blue, ft_grey."""
+	"""Main function to test ft_load, ft_invert, ft_red,
+	ft_green, ft_blue, ft_grey, display the original data and images."""
 
 	try:
 		array = ft_load("landscape.jpg")

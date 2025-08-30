@@ -3,3 +3,5 @@ flake8
 numpy
 
 pillow
+
+matplotlib
