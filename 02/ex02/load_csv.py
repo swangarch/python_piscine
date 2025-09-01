@@ -3,13 +3,15 @@
 import pandas as pd
 
 
-def load(path: str): # -> Dataset: #(You have to adapt the type of return according to your library
-	"""Load a csv file and get it's pandas.dataframe object"""
-	
-	try:
-		dataframe = pd.read_csv(path, header=0, index_col=0)
-		return dataframe
-	
-	except Exception as e:
-		print("Error:", e)
-		return None
+def load(path: str) -> pd.DataFrame:
+    """Load a csv file and return it's pandas.DataFrame object."""
+
+    try:
+        df = pd.read_csv(path, header=0)
+        print("Loading dataset of dimensions", df.shape)
+        df = df.set_index("country")
+        return df
+
+    except Exception as e:
+        print("Error:", e)
+        return None

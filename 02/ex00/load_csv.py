@@ -3,15 +3,15 @@
 import pandas as pd
 
 
-
 def load(path: str) -> pd.DataFrame:
-	"""Load a csv file and return it's pandas.DataFrame object."""
-	
-	try:
-		df = pd.read_csv(path, header=0)
-		print("Loading dataset of dimensions", df.shape)
-		return df
-	
-	except Exception as e:
-		print("Error:", e)
-		return None
+    """Load a csv file and return it's pandas.DataFrame object."""
+
+    try:
+        df = pd.read_csv(path, header=0)
+        print("Loading dataset of dimensions", df.shape)
+        df = df.set_index("country")
+        return df
+
+    except Exception as e:
+        print("Error:", e)
+        return None
