@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 import pandas as pd
+
 
 def load(path: str): # -> Dataset: #(You have to adapt the type of return according to your library
 	"""Load a csv file and get it's pandas.dataframe object"""

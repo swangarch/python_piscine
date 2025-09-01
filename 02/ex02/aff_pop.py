@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 import matplotlib.pyplot as plt
 import numpy as np
 from load_csv import load
+
 
 def convert_unit(x: str):
 	"""Take a number in stroing format digits or end with K as thousand or end with M as million, converts to pure digits representation."""
@@ -13,6 +16,7 @@ def convert_unit(x: str):
 		return float(x[:-1]) * 1000
 	else:
 		return float(x)
+
 
 def show_pop(file: str, region: list, colors: list) -> None:
 	"""Load a csv file with a path, retrive the region to display the population of the contry."""
@@ -41,10 +45,12 @@ def show_pop(file: str, region: list, colors: list) -> None:
 	except Exception as e:
 		print("Error:", e)
 
+
 def main():
 	"""Main function to show the France population."""
 	
 	show_pop("population_total.csv", ["France", "Belgium"], ["green", "cyan"])
+
 
 if __name__ == "__main__":
 	main()

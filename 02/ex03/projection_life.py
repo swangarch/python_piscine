@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 import matplotlib.pyplot as plt
 import numpy as np
 from load_csv import load
+
 
 def main():
 	"""Load two table of income per person and life expectancy, 
