@@ -8,6 +8,11 @@ def main():
 
     print(load("life_expectancy_years.csv"))
 
+    print("-------------Error handle1--------------")
+    print(load("filenotexist.csv"))
+    print("-------------Error handle2--------------")
+    print(load("tester.py"))
+
 
 if __name__ == "__main__":
     main()

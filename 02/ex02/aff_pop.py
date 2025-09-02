@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import matplotlib.pyplot as plt
-import numpy as np
 from load_csv import load
 import sys
 import os
@@ -45,7 +44,7 @@ def show_pop(file: str, region: list, colors: list) -> None:
         for i, country in enumerate(region):
             df_r = df.loc[country].apply(convert_unit)
             # apply convert_unit function to clean the raw data.
-            df_r.index = df_r.index.astype(float)
+            df_r.index = df_r.index.astype(int)
             df_r = df_r[df_r.index <= 2050]
             # pandas boolean indexing, use bool list as index to filter
             plt.plot(df_r.index, df_r.values, label=country, color=colors[i])
@@ -55,10 +54,11 @@ def show_pop(file: str, region: list, colors: list) -> None:
         plt.ylabel('Population')
         plt.margins(x=0.05)
 
-        plt.xticks(np.arange(1800, 2050, 40))
-        ytick_original = np.arange(2e7, 7e7, 2e7)
-        ytick_formatted = [f"{int(t / 1e6)}M" for t in ytick_original]
-        plt.yticks(ytick_original, ytick_formatted)
+        xtick = [year for year in range(1800, 2050) if (year - 1800) % 40 == 0]
+        plt.xticks(xtick)
+        ytick = [a for a in range(int(2e7), int(7e7)) if (a - 2e7) % 2e7 == 0]
+        ytick_formatted = [f"{int(t / 1e6)}M" for t in ytick]
+        plt.yticks(ytick, ytick_formatted)
 
         plt.legend(loc="lower right")
         plt.show()

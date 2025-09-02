@@ -18,7 +18,8 @@ the scatter of 1900, with x-axis GDP and y-axis life Expecancy."""
     print("[LIFE 1900]", life.to_list()[:50], "...")
 
     plt.scatter(income.values, life.values)
-    plt.xlim(300, 10000)
+    plt.xlim(300, max(income) + 1500)
+    plt.margins(x=0.05)
 
     plt.xscale("log")
     # logarithmic relationship

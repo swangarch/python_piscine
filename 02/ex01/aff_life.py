@@ -18,7 +18,10 @@ display the life expectancy"""
         t = 'France Life expectancy Projections'
         x = 'Year'
         y = 'Life expectancy'
+        df_r.index = df_r.index.astype(int)
         df_r.plot(kind='line', title=t, xlabel=x, ylabel=y, figsize=(12, 8))
+        xticks = [year for year in df_r.index if (year - 1800) % 40 == 0]
+        plt.xticks(xticks)
         plt.show()
 
     except Exception as e:
