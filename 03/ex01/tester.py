@@ -22,8 +22,9 @@ def main():
         print("---")
 
         Jaine = Lannister.create_lannister("Jaine", True)
-        print(f"Name : {Jaine.first_name, type(Jaine).__name__},\
-                Alive : {Jaine.is_alive}")
+        string = f"Name : {Jaine.first_name, type(Jaine).__name__},"
+        string += f" Alive : {Jaine.is_alive}"
+        print(string)
 
     except Exception as e:
         print("Error:", e)

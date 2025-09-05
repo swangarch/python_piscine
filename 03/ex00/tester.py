@@ -19,21 +19,21 @@ def main():
     Lyanna = Stark("Lyanna", False)
     print(Lyanna.__dict__)
 
-    print("-------------------error handle 1---------------------------")
+    print("---error handle 1: instantiate abstract class------")
     try:
         hodor1 = Character("hodor")
         print(hodor1)
     except Exception as e:
         print("Error:", e)
 
-    print("-------------------error handle 2---------------------------")
+    print("---error handle 2: missing arg---------------------")
     try:
         hodor2 = Stark()
         print(hodor2)
     except Exception as e:
         print("Error:", e)
 
-    print("-------------------error handle 2---------------------------")
+    print("---error handle 3: wrong arg num-------------------")
     try:
         hodor3 = Stark("Lyanna", False, False)
         print(hodor3)

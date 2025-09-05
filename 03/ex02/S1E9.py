@@ -15,11 +15,12 @@ class Character(ABC):
         """
         docstr [Character init]
         Construct the abstract class Character, it takes _name, and optional
-        is_alive, if is_alive not provided will be set to True, the
-        implementation has to be overwritten by child class.
+        is_alive as parameter, if is_alive not provided will be set to True,
+        the implementation has to be overwritten by child class.
         """
 
-        pass
+        self.first_name = first_name
+        self.is_alive = is_alive
 
     def die(self):
         """
@@ -44,7 +45,7 @@ class Stark(Character):
         if is_alive not provided will be set to True.
         """
 
-        if (not isinstance(first_name, str) or not isinstance(is_alive, bool)):
+        if not isinstance(first_name, str) or not isinstance(is_alive, bool):
             raise Exception("Wrong parameter type for Stark.")
         self.first_name = first_name
         self.is_alive = is_alive
