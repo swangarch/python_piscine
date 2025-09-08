@@ -48,7 +48,7 @@ class calculator:
             print("Error", e)
 
     def __truediv__(self, object) -> None:
-        """Dived by a passed scalar as parameter, print error message when
+        """Divided by a passed scalar as parameter, print error message when
         divide by zero."""
 
         try:

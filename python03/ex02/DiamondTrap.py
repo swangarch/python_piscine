@@ -4,7 +4,7 @@ from S1E7 import Baratheon, Lannister
 
 
 class King(Baratheon, Lannister):
-    """Representing the Baratheon family."""
+    """Representing the King family."""
 
     def __init__(self, first_name, is_alive=True):
         """Create an instance of a king."""
@@ -33,13 +33,13 @@ class King(Baratheon, Lannister):
         out += f'{self.family_name}, {self.eyes}, {self.hairs})'
         return out
 
-    def set_eyes(self, eyes: str) -> None:
+    def set_eyes(self, eyes: str):
         """Set the eye color of the king."""
 
         self.eyes = eyes
         return self
 
-    def set_hairs(self, hairs: str) -> None:
+    def set_hairs(self, hairs: str):
         """Set the hair color of the king."""
 
         self.hairs = hairs

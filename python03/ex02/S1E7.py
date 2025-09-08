@@ -30,7 +30,7 @@ class Baratheon(Character):
     def __repr__(self):
         """Return a string representaion of the construction of instance."""
 
-        return f'Vector: ({self.family_name}, {self.eyes}, {self.hairs})'
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
 
 class Lannister(Character):
@@ -60,7 +60,7 @@ class Lannister(Character):
     def __repr__(self):
         """Return a string representaion of the construction of instance."""
 
-        return f'Vector: ({self.family_name}, {self.eyes}, {self.hairs})'
+        return f"Vector: ('{self.family_name}', '{self.eyes}', '{self.hairs}')"
 
     @classmethod
     def create_lannister(cls, first_name, is_alive=True):
