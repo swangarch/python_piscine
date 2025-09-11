@@ -22,5 +22,5 @@ class Student:
         """Post init Student, after __init__, it initializes field
         not initialized"""
 
-        self.login = self.name[0] + self.surname
+        self.login = self.name[0].capitalize() + self.surname.lower()
         self.id = generate_id()
