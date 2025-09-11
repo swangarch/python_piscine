@@ -56,45 +56,32 @@ def ft_statistics(*args: Any, **kwargs: Any) -> None:
             if not isinstance(kwargs[k], str):
                 raise TypeError("Keyword argument not string type.")
 
+        if len(args) == 0:
+            print("ERROR")
+            return
+
+        mean = sum(args) / len(args)
+        var = sum((mean - num) ** 2 for num in args) / len(args)
+        std = var ** 0.5
+        li = sorted(list(args))
+
         for k in kwargs:
             if kwargs[k] == "mean":
-                if len(args) == 0:
-                    print("ERROR")
-                else:
-                    print("mean :", sum(args) / len(args))
+                print("mean :", mean)
 
             elif kwargs[k] == "median":
-                if len(args) == 0:
-                    print("ERROR")
-                else:
-                    li = sorted(list(args))
-                    print("median:", find_median(li))
+                print("median:", find_median(li))
 
             elif kwargs[k] == "quartile":
-                if len(args) == 0:
-                    print("ERROR")
-                else:
-                    li = sorted(list(args))
-                    quartile_1 = float(quartile(li, 1))
-                    quartile_3 = float(quartile(li, 3))
-                    print(f"quartile : [{quartile_1}, {quartile_3}]")
+                quartile_1 = float(quartile(li, 1))
+                quartile_3 = float(quartile(li, 3))
+                print(f"quartile : [{quartile_1}, {quartile_3}]")
 
             elif kwargs[k] == "std":
-                if len(args) == 0:
-                    print("ERROR")
-                else:
-                    mean = sum(args) / len(args)
-                    var = sum((mean - num) ** 2 for num in args) / len(args)
-                    std = var ** 0.5
-                    print("std :", std)
+                print("std :", std)
 
             elif kwargs[k] == "var":
-                if len(args) == 0:
-                    print("ERROR")
-                else:
-                    mean = sum(args) / len(args)
-                    var = sum((mean - num) ** 2 for num in args) / len(args)
-                    print("var :", var)
+                print("var :", var)
 
             else:
                 pass
