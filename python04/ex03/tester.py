@@ -28,8 +28,6 @@ def main():
         print("Error:", e)
 
     print(student.__dict__)
-    print(student.__repr__())
-    print(student.__str__())
 
 
 if __name__ == "__main__":

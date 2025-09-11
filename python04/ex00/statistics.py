@@ -5,27 +5,29 @@ def quartile(sorted_li: list, quartile_num: int) -> float:
     """Given a list, calculate its quartile"""
 
     length = len(sorted_li)
+
+    # One definition of quartile
     if quartile_num == 1:
-        sub_li_l = sorted_li[0:length // 2]
+        sub_li_l = sorted_li[0:length // 2 + 1]
         return find_median(sub_li_l)
     elif quartile_num == 3:
         sub_li_r = sorted_li[length // 2:]
         return find_median(sub_li_r)
 
     # Another definition of quartile
-    # if l % 2 == 1:
-    #     if percentage == 1:
-    #         sub_li_l = sorted_li[0:l // 2]
+    # if length % 2 == 1:
+    #     if quartile_num == 1:
+    #         sub_li_l = sorted_li[0:length // 2]
     #         return find_median(sub_li_l)
-    #     elif percentage == 3:
-    #         sub_li_r = sorted_li[l // 2 + 1:]
+    #     elif quartile_num == 3:
+    #         sub_li_r = sorted_li[length // 2 + 1:]
     #         return find_median(sub_li_r)
     # else:
-    #     if percentage == 1:
-    #         sub_li_l = sorted_li[0:l // 2]
+    #     if quartile_num == 1:
+    #         sub_li_l = sorted_li[0:length // 2]
     #         return find_median(sub_li_l)
-    #     elif percentage == 3:
-    #         sub_li_r = sorted_li[l // 2:]
+    #     elif quartile_num == 3:
+    #         sub_li_r = sorted_li[length // 2:]
     #         return find_median(sub_li_r)
 
 
