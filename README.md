@@ -44,7 +44,7 @@ Focuses on numerical computing with **NumPy**:
 - Element-wise operations and broadcasting  
 - Image manipulation exercises  
 
-**Skills you gain:**  
+**Skills:**  
 - Efficient numerical computation  
 - Handling large datasets with arrays  
 - Performing mathematical operations on data  
